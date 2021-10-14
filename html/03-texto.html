@@ -4,6 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Elementos html para texto</title>
+	<style>
+		span.especial {
+			padding-left: 10px; /*relleno (margen) de 10px por la izquierda*/
+			padding-right: 10px;
+			color: tomato;/*color tomate*/
+		}
+		span.telefono {
+			border: 1px dotted blue; /*borde punteado de color azul*/
+			background-color: lightgrey;/*color de fondo gris claro*/
+		}
+	</style>
 </head>
 <body>
 	<h1>Elementos html para texto</h1>
@@ -24,5 +35,62 @@
 	<!-- con emmet podría generar esta estructura con:  -->
 	<!-- h${Título de nivel $}*6 -->
 
+	<h3>Marcado de texto con 'em' y 'strong'</h3>
+
+	<p>Lorem ipsum, <em>dolor</em>, sit amet consectetur adipisicing elit. Quam quis voluptatem, aliquam architecto perferendis nemo unde <strong>tenetur aperiam dolore</strong> animi alias iusto impedit vero sapiente, eius. Nemo rerum ipsam blanditiis!</p>
+
+
+	<h3>Etiqueta blockquote para citas</h3>
+	
+
+	<p>Según el W3C, el valor del atributo <em>cite</em> en las etiquetas <strong>blockquote</strong> tiene el siguiente significado:</p>
+
+	<blockquote cite="http://www.w3.org/TR/html401/struct/text.html">"El valor de este atributo es una dirección URL que indica el documento original de la cita."</blockquote>
+
+	<h3>para abreviaturas y acrónimos : 'abbr' y 'acronym'</h3>
+
+	<p>El lenguaje <acronym title="HyperText Markup Language">HTML</acronym> es estandarizado por el <acronym title="World Wide Web Consortium">W3C</acronym>.</p>
+
+	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti similique, quod error nobis laudantium unde reiciendis blanditiis porro laboriosam quas mollitia praesentium totam repellendus dolore id temporibus harum, perspiciatis numquam... <abbr title="etcétera">etc</abbr> </p>
+
+	<h3>otra equita para citas: 'cite'</h3>
+	Como dijo <cite>Mahatma Gandhi</cite>:
+	<blockquote>Vive como si fueras a morir mañana y aprende como si fueras a vivir para siempre.</blockquote>	
+
+	<h3>Para marcado genérico usamos 'span'</h3>
+
+	<p>Lorem, <span class="especial">ipsum dolor</span>, sit amet consectetur adipisicing elit. Praesentium id asperiores tempore veniam, perspiciatis, aliquam aperiam. Sit quasi necessitatibus quibusdam deleniti architecto, ab non mollitia. Iste minus nam cupiditate, voluptatum! <span class="telefono">982 555 777</span></p>
+
+	<h3>Para saltos de línea tenemos : 'br' </h3>
+
+	<p>Lorem ipsum <br> dolor sit amet consectetur adipisicing elit.
+	Vel rem nam dolores repellendus facere! Consequuntur quaerat magni hic quo cum. Repudiandae amet ipsum, neque repellat! Tempora harum eaque dolore vel?</p>
+
+	<h3>Para espacios en blanco tenemos la entidad '&amp;nbsp;' </h3>
+
+	<p>uno      dos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tres cuatro cinco seis siete</p>
+
+	<h3>Para textos literales usamos etiqueta 'pre'</h3>
+
+<pre>
+        La etiqueta pre
+   respeta los espacios en blanco
+      y
+ muestra el texto
+     tal y como
+   está escrito
+</pre>
+
+<p>
+        La etiqueta pre
+   respeta los espacios en blanco
+      y
+ muestra el texto
+     tal y como
+   está escrito
+</p>	
+
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
