@@ -20,6 +20,19 @@
 			<label for="idnombre">Nombre:</label>
 			<input id="idnombre" type="text" name="nombre" size="10" maxlength="20"  >
 		</div>
+		<div class="campos">
+			<label for="idclave">Contraseña:</label>
+			<input id="idclave" type="password" name="clave">
+		</div>
+
+		<input type="hidden" name="referencia" value="r45">
+
+		<div class="campos">
+			<label for="idcond">He leído y acepto condiciones</label>
+			<input id="idcond" type="checkbox" name="condiciones" value="SI" >
+			<!-- si queremos que la opción se marque por defecto, hay que indicar el parámetro checked -->
+		</div>
+
 
 		<div class="campos">
 			<input type="submit" value="Enviar datos">

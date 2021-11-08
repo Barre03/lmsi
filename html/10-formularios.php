@@ -9,8 +9,14 @@
 	<h1>Datos recibidos del formulario</h1>
 <?php
 	$nombre=$_GET['nombre']??"";
+	$clave=$_GET['clave']??"";
+	$referencia=$_GET['referencia']??"";
+	$condiciones=$_GET['condiciones']??"NO";
 
 	echo "<br>Nombre: $nombre";
+	echo "<br>Clave: $clave";
+	echo "<br>Referencia: $referencia";
+	echo "<br>Condiciones: $condiciones";
 
 ?>	
 	<p>
