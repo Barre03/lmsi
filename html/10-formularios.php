@@ -13,12 +13,14 @@
 	$referencia=$_GET['referencia']??"";
 	$condiciones=$_GET['condiciones']??"NO";
 	$sexo=$_GET['sexo']??"";
+	$comentario=$_GET['comentario']??"";
 
 	echo "<br>Nombre: $nombre";
 	echo "<br>Clave: $clave";
 	echo "<br>Referencia: $referencia";
 	echo "<br>Condiciones: $condiciones";
 	echo "<br>Sexo: $sexo";
+	echo "<br>Comentario: $comentario";
 
 ?>	
 	<p>

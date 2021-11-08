@@ -15,7 +15,7 @@
 	<h1>Formularios en HTML</h1>
 	
 	<form action="10-formularios.php" method="GET">
-		
+		<!-- a cualquier campo se le puede poner el parámetro disabled (desactivado) o readonly (solo lectura), ambos impiden que se pueda usar el campo. Solo se diferencian en el aspecto visual -->
 		<div class="campos">
 			<label for="idnombre">Nombre:</label>
 			<input id="idnombre" type="text" name="nombre" size="10" maxlength="20"  >
@@ -34,15 +34,26 @@
 		</div>
 
 		<div class="campos">
+			<label>Sexo: </label>
 			<input id="idhombre" type="radio" value="H" name="sexo">
 			<label for="idhombre"> Hombre </label>
 			<input id="idmujer" type="radio" value="M" name="sexo">
 			<label for="idmujer"> Mujer </label>
 		</div>
 
+		<div class="campos">
+			<label for="idcoment">Comentario:</label><br>
+			<textarea id="idcond" name="comentario" cols="30" rows="3"></textarea>
+		</div>
+
 
 		<div class="campos">
 			<input type="submit" value="Enviar datos">
+			<input type="reset"  value="Restablecer formulario"><br>
+		</div>
+		<div class="campos">
+			<input type="image" src="img/boton-enviar.png" width="150">
+	
 		</div>
 
 
