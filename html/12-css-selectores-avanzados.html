@@ -17,7 +17,15 @@
 		p + p { /*párrafos que tengan antes otro párrafo de forma inmediata*/
 			text-indent: 1.5em; 
 		}
-		
+		/* selector de atributos */
+		p[class] {/*selecciona párrafos con atributo class, sean del valor que sean*/
+			border-right: 1px solid blue;
+		}
+		[href="https://www.lipsum.com"] {
+			/*selecciona cualquier elemento con atributo href con valor "https://www.lipsum.com" */
+			border: 2px double tomato;
+			padding: 5px;
+		}
 	</style>
 </head>
 <body>
@@ -26,14 +34,14 @@
 	<div id="s1">
 		<h3>Sección 1</h3>
 		<!-- (p>lorem)*4 -->
-		<p><a href="#">Lorem ipsum</a>, dolor, sit amet consectetur adipisicing elit. Nobis neque, <span>quibusdam</span> quam nemo explicabo reprehenderit dolorem animi consequatur necessitatibus tempore, tempora vel natus facere eligendi, minus officiis ut nihil? Repellat.</p>
-		<p>Aperiam natus repudiandae, est omnis ratione. Voluptatem ipsum quibusdam magnam, totam. Repellat ad harum quia nobis, consectetur ducimus vero ipsum itaque assumenda blanditiis laudantium culpa minus placeat voluptate, sit, aperiam.</p>
-		<p>Voluptatum incidunt repellat totam perferendis quaerat atque deserunt magnam quis culpa cumque perspiciatis fugiat enim tempora adipisci excepturi ea, ut eius, voluptatibus corporis reiciendis quidem nobis consectetur, iste natus consequuntur!</p>
-		<p>Fugit, voluptatem at, quod hic maxime cumque. Dolores doloribus eos et delectus rerum eveniet sint minus omnis incidunt nihil illum in non, quisquam mollitia aut ab ullam exercitationem, iste aperiam?</p>
+		<p class="impar"><a href="#">Lorem ipsum</a>, dolor, sit amet consectetur adipisicing elit. Nobis neque, <span>quibusdam</span> quam nemo explicabo reprehenderit dolorem animi consequatur necessitatibus tempore, tempora vel natus facere eligendi, minus officiis ut nihil? Repellat.</p>
+		<p class="par">Aperiam natus repudiandae, est omnis ratione. Voluptatem ipsum quibusdam magnam, totam. Repellat ad harum quia nobis, consectetur ducimus vero ipsum itaque assumenda blanditiis laudantium culpa minus placeat voluptate, sit, aperiam.</p>
+		<p class="impar">Voluptatum incidunt repellat totam perferendis quaerat atque deserunt magnam quis culpa cumque perspiciatis fugiat enim tempora adipisci excepturi ea, ut eius, voluptatibus corporis reiciendis quidem nobis consectetur, iste natus consequuntur!</p>
+		<p class="par">Fugit, voluptatem at, quod hic maxime cumque. Dolores doloribus eos et delectus rerum eveniet sint minus omnis incidunt nihil illum in non, quisquam mollitia aut ab ullam exercitationem, iste aperiam?</p>
 	</div>
 	<div id="s2">
 		<h3>Sección 2</h3>
-		<p><a href="#"><span>Lorem ipsum</span></a> dolor sit amet, consectetur adipisicing, elit. Alias, sit iure doloremque ad, illo voluptas ipsum dolorum repellat quidem aliquam nam necessitatibus doloribus voluptate nobis consectetur animi ut repellendus earum?</p>
+		<p><a href="https://www.lipsum.com" target="_blank"><span>Lorem ipsum</span></a> dolor sit amet, consectetur adipisicing, elit. Alias, sit iure doloremque ad, illo voluptas ipsum dolorum repellat quidem aliquam nam necessitatibus doloribus voluptate nobis consectetur animi ut repellendus earum?</p>
 		<p>Nesciunt, molestias! Commodi alias, quia accusamus doloremque amet inventore repellendus illum adipisci autem nihil unde voluptatum ex natus excepturi possimus eos pariatur minima! Est, animi voluptatibus possimus fuga asperiores id.</p>
 		<p>Aperiam rem officiis repellat at quo error earum fugiat deleniti, dicta totam nesciunt exercitationem consequatur quas optio, odit in et nobis dignissimos similique eum! Minus quaerat atque architecto asperiores porro.</p>
 		<p>Quae blanditiis asperiores sit nam nihil hic soluta vel eaque sint consectetur, unde laboriosam neque voluptates fugit! Iusto commodi, exercitationem illum dolorem, mollitia tempore porro quibusdam rerum soluta ea, beatae.</p>
