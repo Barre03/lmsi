@@ -5,61 +5,157 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Formularios en HTML</title>
 	<style>
-		.campos {
-			margin: 8px;
-		}
+	.campos {
+		margin: 8px;
+	}
 
-	</style>
+</style>
 </head>
 <body>
-	<h1>Formularios en HTML</h1>
+	<h1>Formularios en HTML GET</h1>
 	
 	<form action="10-formularios.php" method="GET">
 		<!-- a cualquier campo se le puede poner el parámetro disabled (desactivado) o readonly (solo lectura), ambos impiden que se pueda usar el campo. Solo se diferencian en el aspecto visual -->
-		<div class="campos">
-			<label for="idnombre">Nombre:</label>
-			<input id="idnombre" type="text" name="nombre" size="10" maxlength="20"  >
-		</div>
-		<div class="campos">
-			<label for="idclave">Contraseña:</label>
-			<input id="idclave" type="password" name="clave">
-		</div>
 
-		<input type="hidden" name="referencia" value="r45">
+		<fieldset>
+			<legend>Datos personales</legend>
+			<div class="campos">
+				<label for="idnombre">Nombre:</label>
+				<input id="idnombre" type="text" name="nombre" size="10" maxlength="20"  required="" >
+				<!-- se puede usar el parámetro placeholder="leyenda" para no utilizar label 
+					lo que hace es mostrar la leyenda cuando el campo está vacío.
 
-		<div class="campos">
-			<label for="idcond">He leído y acepto condiciones</label>
-			<input id="idcond" type="checkbox" name="condiciones" value="SI" >
-			<!-- si queremos que la opción se marque por defecto, hay que indicar el parámetro checked -->
-		</div>
+					required indica que el campo es obligatorio para enviar formulario
+				-->
+			</div>
+			<div class="campos">
+				<label for="idclave">Contraseña:</label>
+				<input id="idclave" type="password" name="clave">
+			</div>
 
-		<div class="campos">
-			<label>Sexo: </label>
-			<input id="idhombre" type="radio" value="H" name="sexo">
-			<label for="idhombre"> Hombre </label>
-			<input id="idmujer" type="radio" value="M" name="sexo">
-			<label for="idmujer"> Mujer </label>
-		</div>
+			<input type="hidden" name="referencia" value="r45">
 
-		<div class="campos">
-			<label for="idcoment">Comentario:</label><br>
-			<textarea id="idcond" name="comentario" cols="30" rows="3"></textarea>
-		</div>
+			<div class="campos">
+				<label for="idcond">He leído y acepto condiciones</label>
+				<input id="idcond" type="checkbox" name="condiciones" value="SI" >
+				<!-- si queremos que la opción se marque por defecto, hay que indicar el parámetro checked -->
+			</div>
 
+			<div class="campos">
+				<label>Sexo: </label>
+				<input id="idhombre" type="radio" value="H" name="sexo">
+				<label for="idhombre"> Hombre </label>
+				<input id="idmujer" type="radio" value="M" name="sexo">
+				<label for="idmujer"> Mujer </label>
+				<!-- si queremos que una opción se marque por defecto, hay que indicar el parámetro checked -->
 
+			</div>
+
+			<div class="campos">
+				<label for="idemail">E-mail:</label>
+				<input id="idemail" type="email" name="email" required="" >
+			</div>
+
+			<div class="campos">
+				<label for="idedad">Edad:</label>	
+				<input id="idedad" type="number" name="edad" >
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Datos adicionales</legend>
+			<div class="campos">
+				<label for="idfecha">Fecha:</label>
+				<input id="idfecha" type="date" name="fecha">
+			</div>
+
+			<div class="campos">
+				<label for="idprov">Provincia:</label>
+				<select id="idprov" name="prov">
+					<option value=""></option>
+					<option value="CO">A Coruña</option>
+					<option value="LU">Lugo</option>
+					<option value="OU" >Ourense</option>
+					<option value="PO">Pontevedra</option>
+				</select>
+				<!-- para que una option esté seleccionada por defecto, tenemos que indicar el parámetro selected en dicha opción (solo una) -->
+			</div>
+
+			<div class="campos">
+				<label for="idprog">Programa:</label>
+				<select id="idprog" name="prog">
+					<option value=""></option>
+					<optgroup label="Sistemas Operativos">
+						<option value="W10">Windows 10</option>
+						<option value="Mac">MacOS</option>
+						<option value="Lx">Linux</option>
+						<option value="Ots">Otros</option>
+					</optgroup>
+					<optgroup label="Navegadores">
+						<option value="Ch">Chrome</option>
+						<option value="Fx">Firefox</option>
+						<option value="Sr">Safari</option>
+						<option value="Op">Opera</option>
+						<option value="Otn">Otros</option>
+					</optgroup>
+				</select>			
+			</div>
+
+			<div class="campos">
+				<label for="iddepor">Deportes (marca los que practicas):</label><br>
+				<select id="iddepor" name="depor[]" multiple size="6" >
+					<!-- size indica cuantas opciones se ven sin necesidad de scroll -->
+					<option value="F">Fútbol</option>
+					<option value="B">Baloncesto</option>
+					<option value="N">Natación</option>
+					<option value="A">Atletismo</option>
+					<option value="P">Parapente</option>
+					<option value="T">Triatlón</option>
+				</select>
+
+			</div>
+
+			<div class="campos">
+				<label for="idcoment">Comentario:</label><br>
+				<textarea id="idcond" name="comentario" cols="30" rows="3"></textarea>
+			</div>
+
+		</fieldset>
 		<div class="campos">
 			<input type="submit" value="Enviar datos">
 			<input type="reset"  value="Restablecer formulario"><br>
 		</div>
 		<div class="campos">
 			<input type="image" src="img/boton-enviar.png" width="150">
-	
+
 		</div>
 
 
 
 	</form>
+	<hr>
+	<!-- <hr> crea línea horizontal  -->
+	<h1>Formularios en HTML POST</h1>
 
+	<form action="10-formularios-post.php" method="POST" enctype="multipart/form-data">
+		<!-- si queremos usar campos de fichero type='file', hemos de usar metodo POST y también parámetro enctype="multipart/form-data" en etiqueta form -->
+
+		<div class="campos">
+			<label for="idNombre2">Nombre:</label>
+			<input id="idNombre2" type="text" name="nombre">
+		</div>
+		<div class="campos">
+			<label for="idfoto">foto (adjuntar fichero):<br></label>
+			<input id="idfoto" type="file" name="foto">
+		</div>
+
+		<div class="campos">
+			<input type="submit" value="Enviar formulario">
+		</div>
+
+	</form>
+
+	<br><br><br><br><br>
 
 </body>
 </html>
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS - Selectores avanzados</title>
+	<style>
+		/*selectores avanzados*/
+		/*selector de hijo*/
+
+		p > span { /* span hijos directos de p  */
+			color: red;
+		}
+
+		/* selector adyacente */
+
+		p + p { /*párrafos que tengan antes otro párrafo de forma inmediata*/
+			text-indent: 1.5em; 
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>Selectores avanzados</h1>
+
+	<div id="s1">
+		<h3>Sección 1</h3>
+		<!-- (p>lorem)*4 -->
+		<p><a href="#">Lorem ipsum</a>, dolor, sit amet consectetur adipisicing elit. Nobis neque, <span>quibusdam</span> quam nemo explicabo reprehenderit dolorem animi consequatur necessitatibus tempore, tempora vel natus facere eligendi, minus officiis ut nihil? Repellat.</p>
+		<p>Aperiam natus repudiandae, est omnis ratione. Voluptatem ipsum quibusdam magnam, totam. Repellat ad harum quia nobis, consectetur ducimus vero ipsum itaque assumenda blanditiis laudantium culpa minus placeat voluptate, sit, aperiam.</p>
+		<p>Voluptatum incidunt repellat totam perferendis quaerat atque deserunt magnam quis culpa cumque perspiciatis fugiat enim tempora adipisci excepturi ea, ut eius, voluptatibus corporis reiciendis quidem nobis consectetur, iste natus consequuntur!</p>
+		<p>Fugit, voluptatem at, quod hic maxime cumque. Dolores doloribus eos et delectus rerum eveniet sint minus omnis incidunt nihil illum in non, quisquam mollitia aut ab ullam exercitationem, iste aperiam?</p>
+	</div>
+	<div id="s2">
+		<h3>Sección 2</h3>
+		<p><a href="#"><span>Lorem ipsum</span></a> dolor sit amet, consectetur adipisicing, elit. Alias, sit iure doloremque ad, illo voluptas ipsum dolorum repellat quidem aliquam nam necessitatibus doloribus voluptate nobis consectetur animi ut repellendus earum?</p>
+		<p>Nesciunt, molestias! Commodi alias, quia accusamus doloremque amet inventore repellendus illum adipisci autem nihil unde voluptatum ex natus excepturi possimus eos pariatur minima! Est, animi voluptatibus possimus fuga asperiores id.</p>
+		<p>Aperiam rem officiis repellat at quo error earum fugiat deleniti, dicta totam nesciunt exercitationem consequatur quas optio, odit in et nobis dignissimos similique eum! Minus quaerat atque architecto asperiores porro.</p>
+		<p>Quae blanditiis asperiores sit nam nihil hic soluta vel eaque sint consectetur, unde laboriosam neque voluptates fugit! Iusto commodi, exercitationem illum dolorem, mollitia tempore porro quibusdam rerum soluta ea, beatae.</p>
+	</div>
+</body>
+</html>

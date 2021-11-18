@@ -13,6 +13,12 @@
 	$referencia=$_GET['referencia']??"";
 	$condiciones=$_GET['condiciones']??"NO";
 	$sexo=$_GET['sexo']??"";
+	$email=$_GET['email']??"";
+	$edad=$_GET['edad']??"";
+	$fecha=$_GET['fecha']??"";
+	$prov=$_GET['prov']??"";
+	$prog=$_GET['prog']??"";
+	$depor=$_GET['depor']??array();
 	$comentario=$_GET['comentario']??"";
 
 	echo "<br>Nombre: $nombre";
@@ -20,6 +26,17 @@
 	echo "<br>Referencia: $referencia";
 	echo "<br>Condiciones: $condiciones";
 	echo "<br>Sexo: $sexo";
+	echo "<br>E-mail: $email";
+	echo "<br>Edad: $edad";
+	echo "<br>Fecha: $fecha";
+	echo "<br>Provincia: $prov";
+	echo "<br>Programa: $prog";
+	echo "<br>Deportes:";
+	//var_dump($depor);
+	foreach ($depor as $value) {
+	 	echo "$value ";
+	}
+
 	echo "<br>Comentario: $comentario";
 
 ?>	

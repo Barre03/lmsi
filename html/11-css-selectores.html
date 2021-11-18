@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS - selectores basicos</title>
+	<style>
+
+		/* selectores básicos */
+		/* selector universal '*' */
+		* {
+			margin: 0;/* todos los elementos sin margen */
+		}	
+
+		/* selectores de etiqueta */
+		body {
+			margin: 10px;
+		}
+
+		h1 { /* aplicaría a todas las etiquetas h1 de la página */
+			color: red;
+			text-align: center;
+		}
+
+		h3 {
+			color: blue;
+			margin-left: 1rem; /* em=tamaño de letra por defecto del contenedor , rem = tamaño de letra por defecto de la página (body) */
+		}
+
+
+		h1, h3 { /*selector múltiple de etiquetas*/
+			margin-top: 20px;	
+		}
+
+		p {
+			margin-top: 10px;
+		}
+
+		span {
+			text-decoration: underline;
+			font-weight: 900;
+		}
+
+		/*Selectores descendentes */
+		h1 span {
+			color: green;
+		}
+
+		h3 span {
+			color: tomato;
+		}
+
+		p span {
+			color: purple;
+		}
+
+		p span a {
+			border: 1px dotted grey;
+
+		}
+		/* selector de clase */
+		.letra-comic {
+			font-family: "Comic Sans MS";
+		}
+		p.italica { /*aplica a párrafos que pertenezcan a la clase italica*/
+			font-style: italic;
+		}
+		/* selector de id */
+		#cab3n1 { /*aplica al elemento con id='cab3n1' */
+			border: 1px dashed grey;
+			padding: 5px;
+		}
+
+		/*combinar selectores básicos*/
+
+		#s2 p.italica { /*aplica a párrafos de la clase 'italica' que sean descendientes de etiqueta con id='s2' */
+			text-indent: 1rem; //identación primera línea de 1rem
+		}
+	</style>
+</head>
+<body>
+	<h1 class="letra-comic italica">CSS - <span>Selectores básicos</span></h1>
+
+	<div id="s1">
+		<h3 id="cab3n1">Sección <span>1</span></h3>
+		<p class="italica"><a href="#">Lorem ipsum</a>, dolor sit amet consectetur adipisicing elit. Repellat necessitatibus nostrum, corrupti natus consectetur tempore quam dicta deleniti accusamus autem blanditiis dolorem cupiditate quas vel aut error magnam. Ratione, voluptatibus.</p>
+
+		<p class="letra-comic italica">Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Sequi ullam, <span>minima porro quia totam libero</span>, quibusdam quas, veritatis hic fuga odio ducimus nesciunt eaque facilis eius repellendus, quos nam optio!</p>
+	</div>
+
+	<div id="s2">
+		<h3>Sección <span>2</span></h3>
+		<p><span><a href="#">Lorem ipsum</a> dolor</span> sit amet consectetur adipisicing elit. Suscipit quaerat, laudantium repellat sapiente vel illum aperiam aspernatur harum deserunt cumque nesciunt quos in blanditiis consequatur quas odit natus, veniam, voluptate.</p>
+		<p class="italica">Lorem ipsum dolor sit, amet consectetur, adipisicing elit. <span>Dicta perferendis</span>, consequuntur maxime eius quasi nihil vitae quas libero ipsa voluptatibus, doloremque illum eos debitis, sapiente iusto accusamus a distinctio minima.</p>
+	</div>
+
+</body>
+</html>
