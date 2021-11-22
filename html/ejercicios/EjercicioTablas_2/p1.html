@@ -5,24 +5,43 @@
 		.nombre {text-align: center; border:5px dashed red; width: 90%; margin: auto;padding: 10px; color:blue;}
 		table {
 			border: 2px solid #000 ; /*borde negro*/
+			padding: 25px;/*relleno, separa borde del contenido */
+			margin: 20px auto; /* 20px de margen superior e inferior, y automático izda y dcha (se centra) */
+			border-spacing: 15px;
+
 		}
 		td {
 			border: 1px solid #000 ; /*borde negro*/	
 			text-align: center;
+			padding: 15px;
 		}
+		td p {
+			color: blue;
+			font-size: 1.1em;
+		}
+
+		.fondo td:hover { /*:hover indica que aplicamos propiedades solo cuando ratón pasa por encima de las celdas (td) desdecendientes de la clase fondo  */
+			background-color: #ddd;
+		}
+
+		a:hover { /* al pasar ratón por encima de un enlace (solo hay uno en la página) */
+				font-weight: bold; /*negrita*/
+				color: #000; /*color negro rgb hex->black*/
+		}
+
   </style>
 </head>
 <body>
 	<h1 class="nombre">Germán Feijoo</h1>
 
 	<table>
-		<caption>Oferta Ciclos Formativos</caption>
+		<caption><h2>Oferta Ciclos Formativos</h2></caption>
 		<tr>
 			<td colspan="2">
 				<img src="imagenes/logo.jpg" alt="">
 			</td>
 		</tr>
-		<tr>
+		<tr class="fondo">
 			<td>
 				<p>Administrativo</p>
 				<a href="documentos/administracion.pdf">
@@ -36,7 +55,7 @@
 				</a>
 			</td>
 		</tr>
-		<tr>
+		<tr class="fondo">
 			<td>
 				<p>Electricidad</p>
 				<a href="documentos/electricidad.pdf">
@@ -49,7 +68,12 @@
 					<img src="imagenes/meca.jpg" alt="Mecánica">
 				</a>
 			</td>
-		</tr>		
+		</tr>	
+		<tr>
+			<td colspan="2">
+				<a href="http://edu.xunta.es" target="_blank">Ver oferta educativa completa</a>
+			</td>
+		</tr>	
 	</table>
 	
 </body>
