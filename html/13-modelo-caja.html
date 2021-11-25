@@ -5,16 +5,119 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Modelo de caja</title>
 	<style>
+		/* 
+		* {	box-sizing: border-box;}
+		esta regla css se usa cuando quieres modelo border-box para toda la página
+		*/
+
+		body {
+			background-color: lightblue;
+		}	
+		
+	
 		#uno {
 			box-sizing: content-box;
-			/*modelo de caja basado en contenido, es el modelo por defecto*/
+			/*modelo de caja donde le tamaño está basado en contenido, es el modelo por defecto*/
+			width: 300px;/*tenemos 300px de ancho para el contenido, el padding y el border no están incluidos*/
+
 		}
 
-	</style>
-</head>
-<body>
+		#dos {
+			box-sizing: border-box;
+			/*modelo de caja donde tamaño está definido de borde izdo a borde dcho*/
+			width: 300px;/* tenemos 300px de ancho para border, padding y contenido */
+		}
+		#uno, #dos {
+			border: 15px solid blue;
+			padding: 20px;
+		}
 
-	<p id="uno"></p>
-	
-</body>
-</html>
+		#tres {
+			width: 60%;
+			border-top: 2px dotted red ;
+			border-bottom: 3px dotted red ;
+			border-left: 1px solid green;
+			border-right: 2px solid green;
+			padding: 10px 40px;
+			/*background-color: lightgrey;*/
+			background: lightgrey url("img/logoieslois.jpg") 100% 0% repeat-y  ;
+
+			background-size: 15%;
+
+		}
+
+		#cuatro {
+			width: 80%;
+			border: 2px dashed blue;
+			padding: 10px 30px 50px 70px;
+			background-color: lightgoldenrodyellow;
+			background-image: url("img/logoaAV_trans.png");
+			background-size: 15%;
+			background-position: left center;
+			background-repeat: repeat-y;		}
+
+			#quinto {
+				width: 90%;
+				border: 1px solid #000;
+				padding: 20%;
+				background: 
+				url("img/logoaAV_trans.png") 100% 100% no-repeat,
+				url("img/logoieslois.jpg") 0% 100% no-repeat,
+				url("img/flecha_dcha.png") 0 0 repeat-y,
+				url("img/boton-enviar.png") 95% 5% no-repeat
+				;	
+
+				background-size: 20%, 100px , auto, 25%;	/*defino tamaño imágenes anteriores en el mismo orden*/
+
+				background-color: lightsalmon;
+
+
+			}
+			#sexto { /* podemos usar texturas css como esta: (busca en la red) */
+				padding: 30%;
+				background-color:#269;
+				background-image: linear-gradient(white 2px, transparent 2px),
+				linear-gradient(90deg, white 2px, transparent 2px),
+				linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+				background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+				background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+				}
+
+			#tres, #cuatro, #quinto {
+				box-sizing: border-box;
+				margin: 20px auto;
+
+			}
+
+
+
+		</style>
+	</head>
+	<body>
+
+		<p id="uno">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio natus voluptates eos quibusdam exercitationem, magnam nostrum culpa! Sed reiciendis pariatur vel rem, excepturi, eos at? Aspernatur, architecto cupiditate optio voluptates?	
+		</p>
+
+		<p id="dos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, hic vero iure ducimus exercitationem, veritatis error sit repudiandae esse fugiat, repellendus explicabo dolorum quae impedit sunt atque cupiditate, deleniti placeat!	</p>
+
+		<p id="tres">
+			Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Commodi, facilis quidem voluptas, dolorem a amet unde sunt iste explicabo nemo cumque totam, doloremque. Ducimus, sunt nostrum hic eaque quae neque?	
+		</p>
+
+		<p id="cuatro">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus fuga molestias similique cumque, minima. Libero minima doloribus beatae. Ipsum, quisquam sequi esse perferendis distinctio. Quo fuga distinctio eligendi quidem incidunt.	
+		</p>
+
+		<div id="quinto">
+			<p>	Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos exercitationem at, nihil quis doloremque adipisci mollitia, esse. Fugit ipsum optio rerum, sit nemo itaque qui, necessitatibus doloribus vel, in, facere?	</p>
+			<p>	Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quo illo cumque? Soluta iure eum quaerat. Excepturi ipsum inventore, veritatis ea iste ullam molestiae, ipsam reiciendis ex eaque perspiciatis facere?	</p>
+		</div>
+
+		<div id="sexto">
+			<p>	Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, dolores suscipit delectus corrupti facilis quam nulla enim esse officia qui neque magnam quidem eos doloremque quae natus inventore blanditiis! Id.	</p>
+			<p>	Lorem ipsum dolor sit amet consectetur adipisicing, elit. Harum neque placeat tenetur deserunt autem iusto. Nisi, magnam consequuntur quos natus excepturi voluptatem sint debitis iure explicabo, aliquid doloribus provident cum.	</p>
+		</div>
+	</body>
+	</html>
