@@ -1,0 +1,12 @@
+body {
+	font-size: 1.2em; 
+	background-color: #ddd;
+}
+#contenedor {
+	width: 700px;
+	border: 1px dotted grey;
+	padding: 30px ;
+	margin: 50px auto;
+	background-color: #fff;
+}
+
