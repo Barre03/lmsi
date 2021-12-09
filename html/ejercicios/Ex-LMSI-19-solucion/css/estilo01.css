@@ -1,0 +1,55 @@
+body{
+	background: url("../img/pizza.jpg") center center;
+}	
+div#formulario{
+	background-color: #eee;
+	margin: 50px auto; 
+	width: 600px; 
+	padding: 25px;
+	background: url("../img/pizza2.png") no-repeat 5% 5% #eee;
+
+
+}	
+.detallesp{
+	float: left;
+	width: 33.3%;
+}
+
+legend {
+	font-size: 1.3rem; 
+	color: blue;
+	font-style: italic;
+}
+
+label {
+	color:red;
+}
+label.rotulo {
+	display: block;
+	color:black;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+	margin-bottom: 9px;
+}
+
+form h2 {
+	font-size: 2rem;
+	text-align: center;
+	color:#900;
+
+}
+.botones{
+	text-align: center;
+
+}
+
+div.datose label, div.datosp label {
+	width: 14%;
+	display: inline-block;
+}
+div.datose, div.datosp {
+	margin-bottom: 9px;
+}

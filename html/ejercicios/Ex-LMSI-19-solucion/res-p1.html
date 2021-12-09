@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 1</title>
+	<link rel="stylesheet" href="css/basico.css">
+	<link rel="stylesheet" href="css/estilo01.css">	
+</head>
+<body>
+	<h1 class="_nombre">Pon aquí tu nombre y apellidos</h1>
+
+	<div id="formulario">
+
+		<form action="#" method="post">
+			<h2>Pedido de Pizza</h2>
+
+			<fieldset>
+				<legend>Datos envío</legend>
+				<div class="datose">
+					<label for="nombre">Nombre:</label>
+					<input type="Text" name="nombre" size="40" maxlength="30" id="nombre">
+				</div>
+
+				<div class="datose">
+					<label for="direccion">Dirección:</label>
+					<input type="text" name="direccion" size="50" maxlength="30" id="direccion">
+				</div>	
+			</fieldset>
+
+			<fieldset>
+				<legend>Detalles pedido</legend>
+
+				<div class="detallesp">
+					<label class="rotulo">Ingredientes</label>
+					<label for="queso"> Queso</label>
+					<input type="checkBox" name="ingred" value="Q" id="queso"><br>
+					<label for="pimiento"> Pimiento</label>
+					<input type="checkBox" name="ingred" value="P" id="pimiento"><br>
+					<label for="cebolla"> Cebolla</label>
+					<input type="checkBox" name="ingred" value="C" id="cebolla"><br>
+				</div>
+
+				<div class="detallesp">
+					<label class="rotulo">Tamaño</label>
+					<label for="peque"> Pequeña</label>
+					<input type="radio" name="tam" value="10" id="peque"><br>
+					<label for="med"> Mediana</label>
+					<input type="radio" name="tam" value="12" id="med"><br>
+					<label for="grand"> Grande</label>
+					<input type="radio" name="tam" value="16" id="grand"><br>
+				</div>
+
+				<div class="detallesp">
+					<label for="inst">Instrucciones Especiales</label>
+					<textarea name="inst" rows="5" id="inst" placeholder="Escribe aquí"></textarea>				
+				</div>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Forma de Pago</legend>
+
+				<div class="datosp">
+					<label for="fpago">Datos Pago:</label>
+					<select name="fpago" size="1" id="fpago">
+						<option value="0"></option>
+						<option value="1">Contado</option>
+						<option value="2" >Visa</option>
+						<option value="3">Cheque</option>
+					</select>
+				</div>
+				
+			</fieldset>
+
+			<p class="botones">
+				<input type="submit" name="enviar" value="Enviar" >
+				<input type="reset" value="Borrar">
+			</p>
+
+		</form>
+
+	</div> <!-- fin de div id="formulario" -->
+
+</body>
+</html>

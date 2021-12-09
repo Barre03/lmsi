@@ -1,0 +1,47 @@
+/* Escribe aquí tu CSS para la página web ex03.html */
+
+body {
+	font-size: 1.2em; 
+	background-color: #ddd;
+}
+#contenedor {
+	width: 700px;
+	border: 1px dotted grey;
+	padding: 20px;
+	margin: 50px auto;
+    background-color: #fff;
+    overflow: hidden;
+
+}
+
+h1 {
+	text-align: center;
+}
+
+.bloque {
+	width: 48%;
+	margin:1%;
+	float: left;
+	border: 1px solid blue;
+	padding: 15px;
+	height: 150px;
+	background: url("../img/fondo1.jpg") center center;
+}
+
+
+.campo {
+	padding: 9px;
+}
+
+label[for] {
+	color:blue;
+}
+
+input[type="submit"] {
+	float: right;
+	background-color: blue;
+	border-radius: 15px;
+	padding: 5px 25px;
+	color:white;
+	font-weight: bold;
+ }

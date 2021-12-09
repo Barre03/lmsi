@@ -1,0 +1,48 @@
+body {
+	font-size: 1.2em; 
+	background-color: #ddd;
+}
+#contenedor {
+	width: 700px;
+	border: 1px dotted grey;
+	padding: 30px ;
+	margin: 50px auto;
+    background: #fff url("../img/saludo1.png") repeat-y right top ;
+}
+caption {
+	font-size: 2.5rem;
+	text-decoration: underline;
+	padding: 18px;
+	color: tomato;
+} 
+
+table {
+	width: 85%;
+	border: 5px solid grey;
+	/*border-spacing: 8px;*/
+	border-collapse: collapse;
+	padding: 15px;
+
+}
+
+td {
+	border: 2px solid grey;
+	color:tomato;
+	font-size: 1.2rem;
+	padding: 10px;
+	text-align: right;
+	width: 25%;
+	font-style: italic;
+}
+
+td[rowspan], td[colspan] {
+	background-color: grey;
+	font-weight: bold;
+	font-size: 1.6rem;
+	color: white;
+	text-align: center;
+}
+
+a {
+	color: white;
+}

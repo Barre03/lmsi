@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 3</title>
+	<link rel="stylesheet" href="css/basico.css">
+	<link rel="stylesheet" href="css/res-estilo03.css">
+</head>
+<body>
+	<h2 class="nombre">Pon aquí tu nombre y apellidos</h2>
+	<h3 class="nombre ejercicio">Ejercicio 3. Formulario</h3>
+
+	<div id="contenedor">
+	<h1>Formulario examen</h1>
+	<form action="" method="GET">
+		<div class="bloque">
+			<div class="campo">
+				<label for="nom">Nombre:</label>
+				<input id="nom" type="text" placeholder="Escribe tu nombre" required="" name="nom">
+			</div>
+			<div class="campo">
+				<label for="ape">Apellidos:</label>
+				<input id="ape" type="text" placeholder="Escribe tus apellidos" required="" name="ape">
+			</div>
+			<div class="campo">
+				<label >Sexo: </label>
+				<input id="h" type="radio" value="H" name="sexo">
+				<label for="h"> Hombre</label>
+				<input id="m" type="radio" value="M" name="sexo">
+				<label for="m"> Mujer</label>
+			</div>
+		</div>
+
+		<div class="bloque">
+			<div class="campo">
+				<label for="pais">País:</label>
+				<select name="pais" id="pais">
+					<option value=""></option>
+					<option value="es">España</option>
+					<option value="fr">Francia</option>
+					<option value="pt">Portugal</option>
+				</select>
+			</div>
+			<div class="campo">
+				<label >Deportes: </label>
+				<input id="ft" type="checkbox" value="ft" name="ft">
+				<label for="ft"> Fútbol</label>
+				<input id="nt" type="checkbox" value="nt" name="nt">
+				<label for="nt"> Natación</label>
+			</div>
+			<div class="campo">
+				<input  type="submit" value="Enviar" >
+			</div>
+		</div>
+
+ 	</form>	
+	</div> <!-- fin div #contenedor -->
+
+ 	<div style="margin:0 auto;width:700px;text-align:center" >
+ 	<h3>Crea un formulario con estructura y apariencia similar al de la imagen:</h3>	
+	<a href="img/ejercicio03.jpg" target="_blank"><img src="img/ejercicio03.jpg" style="width:100%;padding:5px;"></a>
+	</div>
+	
+</body>
+</html>
