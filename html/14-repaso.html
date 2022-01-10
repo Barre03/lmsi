@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Repaso</title>
+	<link rel="stylesheet" href="css/14-estilo.css">
+</head>
+<body>
+	<div id="contenedor">
+		<h1>Índice de contenidos</h1>
+		<ol>
+			<li><a href="#parrafos">Párrafos</a></li>
+			<li><a href="#enlacesylistas">Enlaces y Listas</a></li>
+			<li><a href="#tablas">Tablas</a></li>
+			<li><a href="#imagenes">Imágenes</a></li>
+			<li><a href="#formularios">Formularios</a></li>
+		</ol>
+
+		<h1 id="parrafos">Párrafos</h1>
+
+		<p class="azul">Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Ea voluptas nam delectus sunt ipsa unde maxime exercitationem, illum, ullam molestiae earum provident nostrum. Dolores eligendi, molestiae, velit voluptatum beatae atque.</p>
+		<p class="verde">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam ut tempore repellat aspernatur, iusto excepturi temporibus delectus facilis provident repudiandae ipsa earum nostrum accusantium. Ullam rem nesciunt, totam iste nobis?</p>
+
+		<h1 id="enlacesylistas">Enlaces y listas</h1>
+
+		<ul>
+			<li><a href="http://iespenanovo.com">IES Lois Peña Novo</a></li>
+			<li><a href="http://iespenanovo.com" target="_blank">IES Lois Peña Novo (pestaña nueva)</a></li>
+			<li><a href="ejercicios/Ex-LMSI-19-solucion/doc/ex-lmsi-2019.pdf" target="_blank">Exámen LMSI 2019 (PDF)</a></li>
+		</ul>
+
+		<ol>
+			<!-- li{Elemento $}*5 -->
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+			<li>Elemento 3</li>
+			<li>Elemento 4</li>
+			<li>Elemento 5</li>	
+		</ol>
+
+
+		<h1 id="tablas">Tablas</h1>
+
+		<table>
+			<caption>Título de la tabla</caption>
+			<tr>
+				<th>Cab. C1</th>
+				<th>Cab. C2</th>
+				<th>Cab. C3</th>
+				<th>Cab. C4</th>
+			</tr>
+			<!-- (tr>(td{Celda $})*4)*10 -->
+			<tr>
+				<td>Celda 1</td>
+				<td>Celda 2</td>
+				<td>Celda 3</td>
+				<td>Celda 4</td>
+			</tr>
+			<tr>
+				<td>Celda 1</td>
+				<td colspan="2" rowspan="2">Celda múltiple</td>
+				<!-- <td>Celda 3</td> -->
+				<td>Celda 4</td>
+			</tr>
+			<tr>
+				<td>Celda 1</td>
+				<!-- <td>Celda 2</td> -->
+				<!-- <td>Celda 3</td> -->
+				<td>Celda 4</td>
+			</tr>
+			<tr>
+				<td colspan="4">Celda fila completa</td>
+				<!-- <td>Celda 2</td> -->
+				<!-- <td>Celda 3</td> -->
+				<!-- <td>Celda 4</td> -->
+			</tr>
+			<tr>
+				<td>Celda 1</td>
+				<td>Celda 2</td>
+				<td>Celda 3</td>
+				<td>Celda 4</td>
+			</tr>
+			<tr>
+				<td>Celda 1</td>
+				<td>Celda 2</td>
+				<td>Celda 3</td>
+				<td>Celda 4</td>
+			</tr>
+			<tr>
+				<td>Celda 1</td>
+				<td>Celda 2</td>
+				<td>Celda 3</td>
+				<td>Celda 4</td>
+			</tr>
+			<tr>
+				<td rowspan="3">Celda Múlt.</td>
+				<td>Celda 2</td>
+				<td>Celda 3</td>
+				<td>Celda 4</td>
+			</tr>
+			<tr>
+				<!-- <td>Celda 1</td> -->
+				<td>Celda 2</td>
+				<td>Celda 3</td>
+				<td>Celda 4</td>
+			</tr>
+			<tr>
+				<!-- <td>Celda 1</td> -->
+				<td>Celda 2</td>
+				<td>Celda 3</td>
+				<td>Celda 4</td>
+			</tr>	
+
+		</table>
+
+		<h1 id="imagenes">Imágenes</h1>
+
+		<img src="img/logoaAV_trans.png" width="50%" alt="Logo AV">
+
+
+		<h1 id="formularios">Formularios</h1>
+
+		<form action="" method="GET">
+			<fieldset>
+				<legend>Grupo uno</legend>
+				<div class="campos">	
+					<label class="etiqueta" for="c1">Nombre:</label>
+					<input id="c1" type="text" name="nombre">
+				</div>
+
+				<div class="campos">
+					<label class="etiqueta" for="c2">Email:</label>
+					<input id="c2" type="email" name="email">
+				</div>
+
+				<input type="hidden" value="Ref1234" name="ref">
+
+				<div class="campos">
+					<label class="etiqueta" for="c3">Contraseña:</label>
+					<input id="c3" type="password" name="clave">
+				</div>
+
+				<div class="campos">
+					<label class="etiqueta">Sexo:</label>
+					<input id="c4" type="radio" name="sexo" value="H">
+					<label for="c4">hombre </label>
+					<input id="c5" type="radio" name="sexo" value="M">
+					<label for="c5"> mujer </label>
+				</div>
+				<div class="campos">
+					<label class="etiqueta" for="c5-1">Fecha:</label>
+					<input type="date" name="fecha">
+				</div>
+				<div class="campos">
+					<label class="etiqueta" for="c5-2">Edad:</label>
+					<input type="number" name="edad">
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Grupo 2</legend>
+				<div class="campos">
+					<input id="c6" type="checkBox" name="condiciones" >
+					<label for="c6">Acepto las condiciones</label>
+				</div>
+
+				<div class="campos">
+					<label  for="c7">País:</label>
+					<select name="pais" id="c7">
+						<!-- option[value="P$"]{País $}*20 -->
+						<option value=""></option>
+						<option value="P1">País 1</option>
+						<option value="P2">País 2</option>
+						<option value="P3">País 3</option>
+						<option value="P4">País 4</option>
+						<option value="P5">País 5</option>
+						<option value="P6">País 6</option>
+						<option value="P7">País 7</option>
+						<option value="P8">País 8</option>
+						<option value="P9">País 9</option>
+						<option value="P10">País 10</option>
+						<option value="P11">País 11</option>
+						<option value="P12">País 12</option>
+						<option value="P13">País 13</option>
+						<option value="P14">País 14</option>
+						<option value="P15">País 15</option>
+						<option value="P16">País 16</option>
+						<option value="P17">País 17</option>
+						<option value="P18">País 18</option>
+						<option value="P19">País 19</option>
+						<option value="P20">País 20</option>	
+					</select>
+				</div>
+
+				<div class="campos">
+					<label for="c8">Comentario</label><br>	
+					<textarea name="comentario" id="c8" cols="30" rows="5"></textarea>
+				</div>
+			</fieldset>
+		</form>
+
+	</div>
+
+
+</body>
+</html>
