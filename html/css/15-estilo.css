@@ -1,0 +1,85 @@
+#contenedor1 {
+	border: 1px solid blue;
+	padding: 20px;
+	margin-top: 50px;
+}
+
+#contenedor2 {
+	border: 1px solid red;
+	padding: 50px 20px;
+	position: relative;
+	/*top: 35px;*/
+	/*left: -30px;*/
+}
+#contenedor3 {
+	border: 1px solid red;
+	padding: 50px 20px;
+}
+#contenedor4 {
+	border: 1px solid green;
+	padding: 50px 20px;
+}
+#c1av2 { /* la segunda imagen del #contenedor1  */
+	/*position: static; posicionamiento por defecto*/
+	position: relative;
+	/*top: 50px; /* empuja desde arriba (top) 50px  */
+	bottom: -50px; /* tiro desde abajo (bottom) 50px */
+	left: 25px; /* empujo desde la izda (left) 25px */
+	z-index: -1;/*  indica en que capa estará el elemento, 
+				las capas de mayor valor están por encima 
+				de las de menor. Por defecto el valor 
+				de z-index es 0 para todos. */
+}
+
+
+#c2av1 { /* la primera imagen del #contenedor2 */ 
+
+	position: absolute;
+	top: 5px; /* indica que se coloca a 5px de la parte 
+				superior del primer ascendente que tenga un 
+				desplazamiento distinto de static  */
+	right: 5px; /* indica que se coloca a 5px de la parte 
+				derecha del primer ascendente que tenga un 
+				desplazamiento distinto de static  */
+   				/* sino hay un ascendente con posicionamiento 
+   				distinto a static, se colocará respecto a body */
+
+}
+
+#c3av1 { /* la primera imagen del #contenedor2 */ 
+
+	position: absolute;
+	top: 5px; /* indica que se coloca a 5px de la parte 
+				superior del primer ascendente que tenga un 
+				desplazamiento distinto de static  */
+	right: 5px; /* indica que se coloca a 5px de la parte 
+				derecha del primer ascendente que tenga un 
+				desplazamiento distinto de static  */
+   				/* sino hay un ascendente con posicionamiento 
+   				distinto a static, se colocará respecto a body */
+
+}
+
+#c4av1 {
+	/*igual que absolute, pero se queda fijo 
+	cuando hay desplazamientos por scroll, 
+	y además el posicionamiento es con 
+	respecto a body*/
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	border: 1px solid black;
+}
+
+#menu {
+	background-color: grey;
+	position: sticky;
+	top: 20px; /* si por scroll se llega a estga posición 
+				del body, el elemento se queda fijo */
+
+}
+
+.menu {
+	display: inline-block;
+	padding: 10px;
+}
