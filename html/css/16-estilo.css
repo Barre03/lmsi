@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+}
+#contenedor1, #contenedor2 {
+	border: 1px solid black;
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px;
+	overflow: hidden; /* lo usamos cuando todos los elementos del contenedor están flotando */
+}
+
+#contenedor1 p {
+	width: 33.33%;
+	padding: 5px;
+	border: 1px dotted grey;
+
+}
+
+.fizda {
+	float: left;
+}
+.fdcha {
+	float: right;
+}
+
+.limpiar {
+	clear: both; /* impido que nada flote a izda o dcha */
+}
+
+#calendario {
+	width: 60%;
+	margin: 20px auto;
+}
+
+.cab {
+	background-color: black;
+	color: grey;
+}
+.cal {
+	float: left;
+	width: 14.2857%; /* 100% / 7 = 14.2857% , así consigo 7 columnas por fila */
+	border: 1px solid grey;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+
+}
+.centro {
+	text-align: center;
+}

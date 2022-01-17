@@ -74,7 +74,7 @@
 #menu {
 	background-color: grey;
 	position: sticky;
-	top: 20px; /* si por scroll se llega a estga posición 
+	top: 20px; /* si por scroll se llega a esta posición 
 				del body, el elemento se queda fijo */
 
 }
