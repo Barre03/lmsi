@@ -1,0 +1,40 @@
+body {
+	font-size: 1.2em; 
+	background-color: #ddd;
+}
+#contenedor {
+	width: 40%;
+	border: 1px dotted grey;
+	padding: 20px 20px 120px 20px;
+	margin: 50px auto;
+    background-color: #fff;
+    position: relative;
+}
+
+.cuadrado {
+	width: 200px;
+	border: 1px dotted black;
+	padding: 10px;
+	margin: 0;
+}
+span {
+	font-style: italic;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: red;
+	font-variant: small-caps;
+}
+
+
+#dos {
+	background-color: aqua;
+}
+
+#tres {
+	background-color: yellow;
+}
+
+
+#cuatro {
+	background-color: lime;
+}
