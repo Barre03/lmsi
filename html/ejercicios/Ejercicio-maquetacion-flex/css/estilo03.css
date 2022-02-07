@@ -1,0 +1,61 @@
+body {
+	font-size: 1.2em; 
+	background-color: #ddd;
+}
+#contenedor {
+	width: 40%;
+	border: 1px dotted grey;
+	padding: 20px 20px 120px 20px;
+	margin: 50px auto;
+    background-color: #fff;
+    position: relative;
+}
+
+.cuadrado {
+	width: 200px;
+	border: 1px dotted black;
+	padding: 10px;
+	margin: 0;
+}
+span {
+	font-style: italic;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: red;
+	font-variant: small-caps;
+}
+
+
+#uno {
+	position: static; /* es el posicionamiento por defecto, da igual ponerlo o no */
+}
+
+#dos {
+	background-color: aqua;
+	position: relative;
+	top: 50px;  /*desplaza hacia abajo 50px */
+	left: 100px;  /*desplaza hacia la derecha 100px  */
+
+	/*bottom: -50px;  desplaza hacia abajo 50px */
+	/*right: -100px;  desplaza hacia la derecha 100px  */
+
+}
+/*Yo soy 'Tres' y tengo un posicionamiento absoluto con respecto a mi contenedor
+ (#contenedor), 
+ estando situado a 20px del borde derecho de mi 'padre' 
+ y a 0px de su borde inferior*/
+
+#tres {
+	background-color: yellow;
+	position: absolute;
+	right: 20px;
+	bottom: 0; 
+
+}
+
+#cuatro {
+	background-color: lime;
+	position: fixed;
+	right: 100px;
+	top: 100px;
+}

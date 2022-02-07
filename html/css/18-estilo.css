@@ -1,0 +1,171 @@
+/*
+Enalce guías: ;
+gráfica: https://codepen.io/enxaneta/pen/adLPwv
+editable: https://webdesign.tutsplus.com/es/tutorials/a-comprehensive-guide-to-flexbox-alignment--cms-30183
+Más completa: https://lenguajecss.com/css/maquetacion-y-colocacion/flexbox/
+*/
+
+* {box-sizing: border-box;}
+
+#contenedor1 {
+	border: 1px solid red;
+	width: 80%;
+	height: 500px; /* normalmente no se define altura en los contenedores flex */
+	margin: 0 auto;
+	display: flex; /* esto define que el elemento será un flex container (contenedor flex) */
+
+	flex-direction: row; /*define que el eje principal es horizontal de izda a dcha
+							es el valor POR DEFECTO*/
+
+	/* otros valores:
+		row-reverse:  define como eje principal , el horizontal de dcha a izda;
+		column:  		eje principal -> vertical de arriba hacia abajo;
+		column-reverse:  eje principal -> vertical de abajo hacia arriba;
+	 */					
+
+	flex-wrap: nowrap; /* valor por defecto. Los items no saltan de línea aunque 
+						 no tengan espacio */
+
+	/*
+		otros valores: ;
+		wrap:  los items saltan de fila (o columna) cuando no hay más espacio;
+		wrap-reverse: los items saltan de fila (o columna) cuando no hay más espacio,;  
+				en sentido invertido 
+	*/						 
+
+	/*flex-flow: row nowrap;  valores por defecto  */
+
+	/*
+	La propiedad flex-flow es una abreviación para flex-direction y flex-wrap. Puedes usarla, por ejemplo, de la siguiente forma:
+
+	flex-flow: column wrap;
+	en lugar de:
+
+	flex-direction: column; 
+	flex-wrap: wrap;
+	*/
+
+	/* Alineación de los items en el eje principal */
+
+	justify-content: flex-start; /*valor por defecto:  
+									los elementos flex se justifican a 
+									partir del punto de inicio del eje principal*/
+	/* otros valores:
+	flex-end – los elementos flex se justifican desde el final del eje principal.
+	center – los elementos flex se justifican partiendo desde el centro del eje principal.
+	space-between – los elementos flex se distribuyen uniformemente a lo largo del eje principal, desde flex-start hasta flex-end.
+	space-around – los elementos flex se distribuyen uniformemente a lo largo del eje principal, pero se añaden espacios extra iguales a la mitad del resto en ambos extremos.
+	space-evenly - Distribuye los ítems dejando el mismo espacio (solapado) a izquierda y derecha.	
+	 */									
+
+
+	 /* Alineación de los items en el eje transversal (o secundario) */
+	 /* cuando tenemos una sola línea o columna de items (nowrap) */
+
+	 align-items: stretch; /*valor por defecto (stretch) los elementos flex se distribuyen a lo largo del eje perpendicular repartiéndose y ocupando el contenedor flex */
+	 /* resto de valores:
+		flex-start – los elementos flex se alinean desde el inicio del eje perpendicular
+		flex-end – los elementos flex se alinean desde el final del eje perpendicular
+		center – los elementos flex se alinean en el centro del eje perpendicular
+		baseline – los elementos flex se alinean de tal forma que su línea de base coincida
+	  */	 
+
+}
+
+
+
+#n4 { /* item nº 4 */
+	  	align-self: auto; /* auto:  valor por defecto de esta propiedad, que define
+	  	la alineación en eje transversal para un item en particular .
+	  	Este propiedad siempre se aplica sobre un item o conjunto de items, 
+	  	nunca sobre el contenedor flex
+		auto, significa que hereda la alineación de la propiedad align-items
+
+		el resto de valores que puede tomar son los mismos que para align-items
+	  	*/
+
+
+}
+
+
+#contenedor1 .centro {
+	align-self: flex-end;
+}	 
+
+#contenedor1 p, #contenedor2 p, #contenedor3 p {
+	padding: 15px;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid blue;
+	/*width: 25%;*/
+}
+
+
+#contenedor2 {
+	border: 1px solid blue;
+	width: 80%;
+	height: 500px; /* normalmente no se define altura en los contenedores flex */
+	margin: 10px auto;
+	display: flex; /* esto define que el elemento será un flex container (contenedor flex) */
+
+	flex-direction: row;
+	flex-wrap: wrap; 
+
+	 /* Alineación de los items en el eje transversal (o secundario) */
+	 /* cuando tenemos multi línea o multi columna de items (wrap) */
+
+	 align-content: space-around; /* valor por defecto, items en principio del eje transversal */
+	/* otros valores:
+	flex-end – los elementos flex se justifican desde el final del eje secundario.
+	center – los elementos flex se justifican partiendo desde el centro del eje secundario.
+	space-between – los elementos flex se distribuyen uniformemente a lo largo del eje secundario, desde flex-start hasta flex-end.
+	space-around – los elementos flex se distribuyen uniformemente a lo largo del eje secundario, pero se añaden espacios extra iguales a la mitad del resto en ambos extremos.
+	 */									
+
+}
+
+h1 {
+	text-align: center;
+}	
+#contenedor3 {
+	border: 1px solid green;
+	width: 60%;
+	margin: 10px auto;
+	display: flex;
+}
+
+#contenedor3 p {
+	flex-grow: 0; /* valor por defecto 0, indica factor de crecimiento. 0= no crecer */
+	flex-shrink: 1; /* valor por defecto 1, indica factor de decrecimiento, si no llega el espacio.  */
+	flex-basis: 15%; /* valor por defecto es 'auto',  ancho base de los items */
+
+	/*flex: 0 1 15%; esto equivale a lo anterior*/
+
+}
+
+/* documentación para entender el selector (psedo clase) nth-child:
+		https://developer.mozilla.org/es/docs/Web/CSS/:nth-child
+*/
+
+/*
+#contenedor3 p:nth-child(odd) { /* selecciono los párrafos pares de #contenedor3 *
+	flex-grow: 1; /* estos crecen de forma uniforme con el espacio sobrante *
+	flex-shrink: 0; /* decrecen menos que el conjunto de párrafos *
+	background-color: lightcoral;
+
+}
+*/
+
+#contenedor3 p:nth-child(2) {
+	flex-grow: 1;
+	background-color: lightcoral;
+	order: -1; /*valor por defecto es 0, los elementos se ordenan por número order*/
+}
+#contenedor3 p:nth-child(3) {
+	flex-grow: 1;
+	background-color: tomato;
+	order: 1;
+}
+
+
