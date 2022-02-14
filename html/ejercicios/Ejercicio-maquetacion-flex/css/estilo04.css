@@ -2,112 +2,36 @@ body {
 	font-size: 1.2em;
 	background-color: #ddd;
 }
-/* Escribe aquí tu CSS para la página web ex04.html */
 
-
-/*#contenedor :
-Ancho de 1200px, centrado y color de fondo blanco.
-*/
 #contenedor {
 	width: 1200px;
-	background-color: #fff; /*white*/
+	background-color: white;
 	margin: 0 auto;
 }
-
-.limpiar {
-	clear: both;
-}
-
-/*#cabecera :
-Color de fondo ‘coral’ y margen interior de 25px. (rellerno)
-El logo a la izquierda y el menú a la derecha como se ve en la imagen.*/
-
 
 
 #cabecera {
 
 	background-color: coral;
 	padding: 25px;
-	overflow: hidden;
-
-	position: relative;
-	/* hemos cambiado a relative, para que tenga posicionamiento distinto 
-	a static, para así poder colocar de forma absoluta el menú con respecto
-	a este bloque y no con respecto al body  */
-
-}
-
-	#cabecera h1 {
-		float: left;
+	display: flex;
+	justify-content: space-between;
 	}
-
-	/* colocar el menu con posicionamineto flotante:  */
-/*	#cabecera nav {  también podría usar como selector #menu 
-		float: right;
-	}
-*/
-	/* colocar el menú con posiciomiento absoluto: */
-
-	#cabecera nav {
-		position: absolute;
-		top: 25px;
-		right: 25px;
-
-	}
-
-
-/*
-#principal 
-Ancho de 1000 px, a la izquierda, margen interno de 15px.
-Los artículos ocupan el 50% de su contenedor y se muestran de 2 en 2 en horizontal
-El margen interno de los artículos es de 10px.
-*/
-
-#principal {
-	width: 1000px;
-	padding: 15px;
-	float: left;
+#contenido {
+	display: flex;
 }
-
-	#principal article {
-		width: 50%;
-		float: left;
-		padding: 10px;
-	}
-
-
-/*
-#complementario 
-Color de fondo ‘DarkSeaGreen’, ancho de 200px, margen interno de 15px y se muestra 
-a la derecha del contenido principal
-*/
-
-#complementario {
-	background-color: DarkSeaGreen;
-	width: 200px;
-	padding: 15px;
-	float: left;   /* en este caso también valdría poner right */
-}
-
-
-/*
-#pie 
-Color de fondo negro (#000 o black)
-Cada sección del pie ocupa 400px y se muestran en horizontal como se ve en la imagen.
-El margen interior de las secciones de #pie son de 15px
-
-*/
-#pie {
-	background-color: #000;
-	color: #fff;
-	overflow: hidden;
-
-}
-
-	#pie div {
-		width: 400px;
-		float: left;
+	#principal {
+		flex-basis: 80%;
 		padding: 15px;
-
-
+		justify-content: space-around;
 	}
+	#complementario {
+		flex-basis: 20%;
+		padding: 15px;
+		background-color: darkseagreen;
+	}
+
+#pie {
+	flex-basis: 33%;
+	justify-content: ;
+}
